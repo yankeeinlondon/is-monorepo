@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@yankeeinlondon/package-json':
-        specifier: 1.0.0-alpha.1
+        specifier: '>=1.0.0-alpha.1'
         version: 1.0.0-alpha.1(@types/node@22.15.21)(@yankeeinlondon/kind-error@1.2.2)(inferred-types@0.55.23)(simple-git@3.27.0)
       inferred-types:
-        specifier: ^0.55.23
+        specifier: '>=0.55.23'
         version: 0.55.23
       yaml:
-        specifier: ^2.8.0
+        specifier: '>=2.8.0'
         version: 2.8.0
     devDependencies:
       '@antfu/eslint-config':
@@ -1283,8 +1283,8 @@ packages:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
 
-  electron-to-chromium@1.5.157:
-    resolution: {integrity: sha512-/0ybgsQd1muo8QlnuTpKwtl0oX5YMlUGbm8xyqgDU00motRkKFFbUJySAQBWcY79rVqNLWIWa87BGVGClwAB2w==}
+  electron-to-chromium@1.5.158:
+    resolution: {integrity: sha512-9vcp2xHhkvraY6AHw2WMi+GDSLPX42qe2xjYaVoZqFRJiOcilVQFq9mZmpuHEQpzlgGDelKlV7ZiGcmMsc8WxQ==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3800,7 +3800,7 @@ snapshots:
   browserslist@4.24.5:
     dependencies:
       caniuse-lite: 1.0.30001718
-      electron-to-chromium: 1.5.157
+      electron-to-chromium: 1.5.158
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.5)
 
@@ -4015,7 +4015,7 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  electron-to-chromium@1.5.157: {}
+  electron-to-chromium@1.5.158: {}
 
   emoji-regex@8.0.0: {}
 
