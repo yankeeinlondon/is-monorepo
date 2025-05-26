@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": ".tsbuildinfo",
+    "target": "ES2022",
+    "baseUrl": ".",
+    "module": "ESNext",
+    "types": ["node"],
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "noUnusedLocals": false,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    "paths": {
+      "~/*": [ "src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "tests",
+  ],
+  "exclude": [
+    "bin",
+    "node_modules"
+  ]
+}
