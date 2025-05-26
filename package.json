@@ -1,6 +1,6 @@
 {
     "name": "@yankeeinlondon/is-monorepo",
-    "version": "1.0.0",
+    "version": "1.0.0-alpha.1",
     "description": "Exports an node function which tests whether a given directory is a monorepo",
     "type": "module",
     "main": "dist/index.cjs",
@@ -8,7 +8,8 @@
     "scripts": {
         "build": "tsdown src/index.ts --format=esm,cjs --dts",
         "test": "vitest",
-        "lint": "eslint src --fix"
+        "lint": "eslint src --fix",
+        "release": "bumpp"
     },
     "keywords": [],
     "author": "Ken Snyder <ken@ken.net>",
