@@ -1,6 +1,6 @@
 import { describe, it, expect, afterEach } from "vitest";
 import { isMonorepo, getMonorepoPackages } from "~/index";
-import { join } from "path";
+import { join, dirname } from "pathe";
 import { existsSync, mkdirSync, writeFileSync, rmSync } from "fs";
 
 const TMP = join(__dirname, "tmp-monorepo");
@@ -10,8 +10,7 @@ function setupMonorepo(structure: Record<string, string | object>) {
   mkdirSync(TMP, { recursive: true });
   for (const [file, content] of Object.entries(structure)) {
     const filePath = join(TMP, file);
-    const dir = filePath.substring(0, filePath.lastIndexOf("/"));
-    if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
+   const dir = dirname(filePath);   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
     if (typeof content === "string") {
       writeFileSync(filePath, content);
     } else {
