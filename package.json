@@ -18,14 +18,14 @@
     "devDependencies": {
         "@antfu/eslint-config": "^4.13.2",
         "@type-challenges/utils": "^0.1.1",
-        "@types/node": "22",
+        "@types/node": "^22.15.23",
         "bumpp": "^10.1.1",
         "eslint": "^9.27.0",
         "eslint-plugin-format": "^1.0.1",
         "husky": "^9.1.7",
         "jiti": "^2.4.2",
         "npm-run-all": "^4.1.5",
-        "tsdown": "^0.12.3",
+        "tsdown": "^0.12.4",
         "typescript": "^5.8.3",
         "vitest": "^3.1.4"
     },
