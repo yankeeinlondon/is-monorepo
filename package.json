@@ -1,6 +1,6 @@
 {
     "name": "@yankeeinlondon/is-monorepo",
-    "version": "1.0.0-beta.1",
+    "version": "1.0.0-beta.2",
     "description": "Exports an node function which tests whether a given directory is a monorepo",
     "type": "module",
     "main": "dist/index.cjs",
