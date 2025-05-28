@@ -18,7 +18,7 @@
     "devDependencies": {
         "@antfu/eslint-config": "^4.13.2",
         "@type-challenges/utils": "^0.1.1",
-        "@types/node": "^22.15.23",
+        "@types/node": "^22.15.24",
         "bumpp": "^10.1.1",
         "eslint": "^9.27.0",
         "eslint-plugin-format": "^1.0.1",
@@ -31,7 +31,7 @@
         "vitest": "^3.1.4"
     },
     "peerDependencies": {
-        "@yankeeinlondon/package-json": ">=1.0.0-alpha.1",
+        "@yankeeinlondon/package-json": ">=1.0.0-beta.2",
         "inferred-types": ">=0.55.23",
         "yaml": ">=2.8.0"
     }
