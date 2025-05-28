@@ -17,13 +17,27 @@ export const MONOREPO_LOOKUP = [
   ["rush.json", "rush"],
 ] as const satisfies [string, string][];
 
-export type Monorepo = {
+export type MonorepoTech = {
   [K in keyof typeof MONOREPO_LOOKUP]: typeof MONOREPO_LOOKUP[K] extends [string, infer Name]
     ? Name
     : never
 }[number] | "yarn";
 
-export function isMonorepo(path?: string): false | Monorepo {
+
+/**
+ * **isMonorepo**`(path?) -> false | MonorepoTech`
+ * 
+ * Tests if the given path is in a monorepo.
+ * 
+ * - if no path is specified then the _current working directory_ 
+ * is used
+ * - if path _does not_ appear to be a monorepo then `false` is
+ * returned
+ * - otherwise the monorepo's _tech_ is provided (e.g., yarn, lerna, etc.)
+ * 
+ * **Related:** `isMonorepoLike()`, `getMonorepoPackages()`
+ */
+export function isMonorepo(path?: string): false | MonorepoTech {
   const dir = path || cwd();
   const pkg: PackageJson = parsePackageJson(dir);
 
@@ -57,6 +71,16 @@ export function isMonorepoLike(path?: string): boolean {
 
 type RelativePath = `./${string}`;
 
+/**
+ * **getMonorepoPackages**`(dir?) -> Record<string, RelativePath>`
+ * 
+ * Get's the defined _packages_ in a monorepo.
+ * 
+ * - _keys_ are the package names
+ * - _values_ is the _relative_ path to the package's definition
+ * 
+ * **Related:** `isMonorepo()`, `isMonorepoLike()`
+ */
 export function getMonorepoPackages(dir?: string): Record<string, RelativePath> {
   dir = dir || cwd();
   const result: Record<string, RelativePath> = {};
